@@ -38,7 +38,7 @@ package day2.HW;
                     return student;
                 }
             }
-            return null; // Return null if student not found
+            return null;
         }
 
         public ArrayList<Student> getAllStudents() {
@@ -49,29 +49,28 @@ package day2.HW;
             for (Student student : students) {
                 if (student.getId() == id) {
                     students.remove(student);
-                    return true; // Return true if student removed successfully
+                    return true;
                 }
             }
-            return false; // Return false if student not found
+            return false;
         }
     }
 
     class Main {
         public static void main(String[] args) {
-            // Create Student objects
+
             Student student1 = new Student("Alice", 1);
             Student student2 = new Student("Bob", 2);
             Student student3 = new Student("Charlie", 3);
 
-            // Create StudentManager object
+
             StudentManager manager = new StudentManager();
 
-            // Add students to the manager
+
             manager.addStudent(student1);
             manager.addStudent(student2);
             manager.addStudent(student3);
 
-            // Retrieve and display a student by ID
             int idToFind = 2;
             Student foundStudent = manager.getStudentById(idToFind);
             if (foundStudent != null) {
@@ -80,14 +79,13 @@ package day2.HW;
                 System.out.println("Student with ID " + idToFind + " not found.");
             }
 
-            // Display all students in the list
             ArrayList<Student> allStudents = manager.getAllStudents();
             System.out.println("All students:");
             for (Student student : allStudents) {
                 System.out.println(student.getName() + " (ID: " + student.getId() + ")");
             }
 
-            // Remove a student by ID and display the list of students again
+
             int idToRemove = 3;
             boolean removed = manager.removeStudentById(idToRemove);
             if (removed) {
@@ -96,7 +94,7 @@ package day2.HW;
                 System.out.println("Student with ID " + idToRemove + " not found. No student removed.");
             }
 
-            // Display all students in the list after removal
+
             System.out.println("Students after removal:");
             allStudents = manager.getAllStudents();
             for (Student student : allStudents) {
