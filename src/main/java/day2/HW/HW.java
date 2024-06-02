@@ -59,9 +59,9 @@ package day2.HW;
     class Main {
         public static void main(String[] args) {
 
-            Student student1 = new Student("Alice", 1);
-            Student student2 = new Student("Bob", 2);
-            Student student3 = new Student("Charlie", 3);
+            Student student1 = new Student("Wejdan", 1);
+            Student student2 = new Student("Ail", 2);
+            Student student3 = new Student("Asma", 3);
 
 
             StudentManager manager = new StudentManager();
