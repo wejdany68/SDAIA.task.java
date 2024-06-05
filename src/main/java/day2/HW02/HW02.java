@@ -1,4 +1,4 @@
-package day2.HW;
+package day2.HW02;
 
 
     import java.util.ArrayList;
